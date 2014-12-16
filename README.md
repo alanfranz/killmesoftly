@@ -53,7 +53,7 @@ Those should be available on almost any Linux system, even on minimal installs:
 
 ## INSTALL
 
-Just clone this repository, or [download a packed zip](archive/master.zip), and you're ready to go.
+Just clone this repository, or [download a packed zip](../../archive/master.zip), and you're ready to go.
 
 ## TODOs
 * OSX and/or \*BSD support
