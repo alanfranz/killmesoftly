@@ -1,0 +1,11 @@
+#!/bin/bash
+. "$(dirname $(readlink -f $0))/kms_functions"
+
+[ -z "$1" ] && { echo -e "Kill processes softly by pid number\nUsage:\n$0 first_pid_to_kill [second_pid_to_kill] <...>\n"; exit 1; }
+
+while (( "$#" )); do
+    [[ ! "$1" =~ ^[0-9]+$ ]] && { echo "Invalid process pid ${1}, skipping"; shift; continue; }
+    [ ! -e "/proc/$1" ] && { echo "PID ${1} not found among running processes, skipping"; shift; continue; }
+    killmesoftly $1
+    shift
+done

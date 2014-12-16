@@ -1,0 +1,13 @@
+#!/bin/bash
+[ -z "$1" ] && { echo -e "Kill process softly by name matching pattern.\nUsage:\n${0} first_pgrep_pattern [second_pgrep_pattern] <...> \n"; exit 1; }
+
+. "$(dirname $(readlink -f $0))/kms_functions"
+
+while (( "$#" )); do
+    PROCESS_PIDS=($(pgrep $1))
+    [ "${#PROCESS_PIDS[@]}" -gt 1 ] && { echo "More than one process matches $1, won't kill multiple processes"; shift; continue; }
+    [ "${#PROCESS_PIDS[@]}" -eq 0 ] && { echo "No process matches given pattern $1"; shift; continue; }
+    PID=${PROCESS_PIDS[0]}
+    killmesoftly ${PID}
+    shift
+done
