@@ -1,1 +1,2 @@
-testenv
+test/testenv
+test/*.pid
