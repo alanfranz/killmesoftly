@@ -1,7 +1,11 @@
 #!/bin/bash
-[ -z "$1" ] && { echo -e "Kill processes softly by name matching pattern.\nUsage:\n${0} first_pgrep_pattern [second_pgrep_pattern] <...> \n"; exit 1; }
+. "$(dirname "${BASH_SOURCE[0]}")/kms_functions"
 
-. "$(dirname $(readlink -f $0))/kms_functions"
+[ -z "$1" ] && { 
+    echo -e "Kill processes softly by name matching pattern."
+    echo -e "usage: $(basename "${0}") first_pgrep_pattern [second_pgrep_pattern] <...> \n"
+    exit 1
+}
 
 while (( "$#" )); do
     PROCESS_PIDS=($(pgrep $1))
