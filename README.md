@@ -65,3 +65,4 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * consider whether we should return different exit codes in the event some parameters are wrong; currently we return a nonzero exit code only on zero-parameters passed or hard failures.
 * allow specifying a different signal rather than SIGTERM for soft kill, and/or additional signals to be sent before/after SIGTERM.
 * configurable timeouts
+* consider transforming such scripts in a set of functions that can be sourced, rather than used as executables
