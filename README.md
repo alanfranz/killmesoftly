@@ -51,9 +51,13 @@ Those should be available on almost any Linux system, even on minimal installs:
 * *readlink* (e.g. *coreutils* on Ubuntu/Debian)
 * [proc filesystem](http://www.tldp.org/LDP/sag/html/proc-fs.html)
 
-## INSTALL
+## Instance
 
-Just clone this repository, or [download a packed zip](../../archive/master.zip), puts  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure kms_functions is in the same directory, and you're ready to go.
+Just clone this repository, or [download a packed zip](../../archive/master.zip), puts  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+
+## License
+
+This is Apache-2.0 licensed, which is the most permissive license I could think of. Feel free to include and modify this code however you like.
 
 ## TODOs
 * OSX and/or \*BSD support
