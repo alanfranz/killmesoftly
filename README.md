@@ -55,7 +55,7 @@ Those should be available on almost any Linux system, even on minimal installs:
 * *readlink* (e.g. *coreutils* on Ubuntu/Debian)
 * [proc filesystem](http://www.tldp.org/LDP/sag/html/proc-fs.html)
 
-## Instance
+## Install
 
 Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
 
