@@ -33,7 +33,7 @@ The default timeout is 15 seconds. It's currently hardcoded.
 ### kmsn
 
 ```
-Kill process softly by name matching pattern.
+Kill processes softly by name matching pattern.
 Usage:
 kmsn first_pgrep_pattern [second_pgrep_pattern] <...>
 ```
@@ -57,7 +57,7 @@ Those should be available on almost any Linux system, even on minimal installs:
 
 ## Instance
 
-Just clone this repository, or [download a packed zip](../../archive/master.zip), puts  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
 
 ## License
 

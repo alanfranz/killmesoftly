@@ -1,5 +1,5 @@
 #!/bin/bash
-[ -z "$1" ] && { echo -e "Kill process softly by name matching pattern.\nUsage:\n${0} first_pgrep_pattern [second_pgrep_pattern] <...> \n"; exit 1; }
+[ -z "$1" ] && { echo -e "Kill processes softly by name matching pattern.\nUsage:\n${0} first_pgrep_pattern [second_pgrep_pattern] <...> \n"; exit 1; }
 
 . "$(dirname $(readlink -f $0))/kms_functions"
 
