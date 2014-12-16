@@ -66,3 +66,4 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * allow specifying a different signal rather than SIGTERM for soft kill, and/or additional signals to be sent before/after SIGTERM.
 * configurable timeouts
 * consider transforming such scripts in a set of functions that can be sourced, rather than used as executables
+* add options for killing process groups and/or check whether children have actually exited
