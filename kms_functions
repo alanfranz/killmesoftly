@@ -1,6 +1,6 @@
 function killmesoftly {
     PID=$1
-    echo -n "Now sending SIGTERM to PID ${PID} ... "
+    echo -n "Now sending SIGTERM to PID ${PID}... "
     kill ${PID}
     [ 0 -ne "$?" ] && { echo "Could not kill process. You are probably not allowed to perform the operation"; exit 3; }
 
@@ -11,7 +11,7 @@ function killmesoftly {
         sleep 0.2
         COUNT=$((COUNT+1))
         [ "${COUNT}" -gt 150 ] && SIGKILL_SENT && { echo "Could not stop. Probably stuck in kernel call. Abandoning the whole kill chain."; exit 2; }
-        [ "${COUNT}" -gt 75 ] && { echo -n "didn't quit, sending kill... "; kill -9 ${PID}; COUNT=0; SIGKILL_SENT=0; }
+        [ "${COUNT}" -gt 75 ] && { echo -n "didn't terminate, sending SIGKILL... "; kill -9 ${PID}; COUNT=0; SIGKILL_SENT=0; }
     done
     echo "killed successfully"
 }
