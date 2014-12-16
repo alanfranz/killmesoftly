@@ -1,6 +1,6 @@
 # Kill Me Softly
 
-Kill process in a reliable manner.
+Kill processes in a reliable manner.
 
 ## Purpose
 
