@@ -49,11 +49,9 @@ Usage:
 
 Those should be available on almost any Linux system, even on minimal installs:
 
-* Linux
+* Linux or OSX
 * Bash
 * *Kill* and *pgrep* executables (e.g. *procps* package on Ubuntu/Debian)
-* *readlink* (e.g. *coreutils* on Ubuntu/Debian)
-* [proc filesystem](http://www.tldp.org/LDP/sag/html/proc-fs.html)
 
 ## Install
 
@@ -64,7 +62,7 @@ Just clone this repository, or [download a packed zip](../../archive/master.zip)
 This is Apache-2.0 licensed, which is the most permissive license I could think of. Feel free to include and modify this code however you like.
 
 ## TODOs
-* OSX and/or \*BSD support
+* \*BSD support
 * a ```--all``` switch for kmsp that allows killing all processes that match a certain parameter
 * consider whether we should return different exit codes in the event some parameters are wrong; currently we return a nonzero exit code only on zero-parameters passed or hard failures.
 * allow specifying a different signal rather than SIGTERM for soft kill, and/or additional signals to be sent before/after SIGTERM.
