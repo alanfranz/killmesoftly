@@ -18,6 +18,8 @@ By the way, what I usually want is something like **hey, kill this process and d
 It's stupid, but it's everything *killmesoftly* does; it tries to send a SIGTERM to a process, if it doesn't die within
 15 seconds it sends a SIGKILL, if it still doesn't die it reports it.
 
+AFAIK there's no other tool to do that, even though such logic is implemented in a lot of software and service scripts.
+
 ## Usage
 
 You can feed the two scripts with process names (or matching expression, that will be sent to [pgrep](http://linux.die.net/man/1/pgrep)) or PIDs, respectively.
@@ -25,6 +27,8 @@ You can feed the two scripts with process names (or matching expression, that wi
 The approach is blocking by design: the script won't exit until the process is actually dead, and latter PIDs or names won't be killed until previous ones are dead.
 
 If there's an error on one parameter (e.g. you've specified a name which matches more than one process, or a non-existent PID) the scripts will go on with the other parameters; on the contrary, if there's an hard error (e.g. a process that doesn't exit on a SIGKILL) the whole kill chain will be stopped and an error will be returned.
+
+The default timeout is 15 seconds. It's currently hardcoded.
 
 ### kmsn
 
