@@ -9,7 +9,7 @@
 
 while (( "$#" )); do
     [[ ! "$1" =~ ^[0-9]+$ ]] && { echo "Invalid process pid ${1}, skipping"; shift; continue; }
-    kill -0 $1 2>/dev/null || { echo "PID ${1} not found among running processes, skipping"; shift; continue; }
+    checkPsExists $1 || { echo "PID ${1} not found among running processes, skipping"; shift; continue; }
     killmesoftly $1
     shift
 done

@@ -15,3 +15,12 @@ function killmesoftly {
     done
     echo "killed successfully"
 }
+
+# return 0 if a PID exists, 1 in any other case (regardless of ps exit code)
+function checkPsExists {
+    PID=$1
+    ps -p ${PID} >/dev/null
+    [ 0 -eq $? ] && return 0
+    return 1
+}
+
