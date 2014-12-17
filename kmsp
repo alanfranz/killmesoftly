@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 . "$(dirname $(readlink -f $0))/kms_functions"
 
 [ -z "$1" ] && { echo -e "Kill processes softly by pid number\nUsage:\n$0 first_pid_to_kill [second_pid_to_kill] <...>\n"; exit 1; }
