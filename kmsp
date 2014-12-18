@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
-. "$(dirname "${BASH_SOURCE[0]}")/kms_functions"
+
+function realpath {
+    if [ `uname` == "Darwin" ]; then
+        # if symlink, resolve it, otherwise just echo back filepath
+        realfile=$(readlink "$1")
+        if [ $? -eq 0 ]; then echo "$realfile"; else echo "$1"; fi
+    else 
+        readlink -f "$1"
+    fi
+}
+
+. "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/kms_functions"
 
 [ -z "$1" ] && { 
     echo -e "Kill processes softly by pid number"
