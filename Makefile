@@ -11,5 +11,5 @@ kmsp.standalone: kmsp kms_functions
 	chmod +x kmsp.standalone
 
 test: all
-	cd test ; make
+	cd test ; make distclean test
 
