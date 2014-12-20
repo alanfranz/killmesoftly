@@ -3,11 +3,7 @@
 SHELL := /bin/bash
 
 test: testkmsn testkmsp
-	@testenv/bin/python -c "import os; print os.getpid(); import time; import signal; signal.signal(signal.SIGTERM, lambda x,y: time.sleep(120)); time.sleep(120)"&
-	@testenv/bin/python -c "import os; print os.getpid(); import time; time.sleep(120)"&
-	@testenv/bin/python -c "import os; print os.getpid(); import time; time.sleep(120)"&
-	@testenv/bin/python -c "import os; print os.getpid(); import time; time.sleep(120)"&
-
+	
 testkmsn: testenv
 	@testenv/bin/python -c "from setproctitle import setproctitle; setproctitle('hardtokill'); import time; import signal; signal.signal(signal.SIGTERM, lambda x,y: time.sleep(120)); time.sleep(120)"&
 	@testenv/bin/python -c "from setproctitle import setproctitle; setproctitle('asd1'); import time; time.sleep(120)"&
