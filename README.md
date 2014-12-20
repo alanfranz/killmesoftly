@@ -56,6 +56,17 @@ and are installed by default in OSX.
 
 ## Install
 
+### Standalone executables
+
+Go anywhere in your executable path and download the latest standalone version of the executables:
+
+```
+wget https://www.franzoni.eu/releases/killmesoftly/master/kmsp https://www.franzoni.eu/releases/killmesoftly/master/kmsn
+chmod +x ./kmsp ./kmsn
+```
+
+### From Github source
+
 Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
 
 ## License
