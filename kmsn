@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. "$(dirname $0)/kms_functions"
+source "$(dirname $0)/kms_functions"
 
 [ -z "$1" ] && { 
     echo -e "Kill processes softly by name matching pattern."
