@@ -42,7 +42,7 @@ kmsn first_pgrep_pattern [second_pgrep_pattern] <...>
 ```
 Kill processes softly by pid number
 Usage:
-./kmsp first_pid_to_kill [second_pid_to_kill] <...>
+kmsp first_pid_to_kill [second_pid_to_kill] <...>
 ```
 
 ## Requirements
