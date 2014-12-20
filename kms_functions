@@ -23,4 +23,3 @@ function checkPsExists {
     [ 0 -eq $? ] && return 0
     return 1
 }
-
