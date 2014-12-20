@@ -1,3 +1,4 @@
 test/testenv
 test/*.pid
 *.standalone
+test/*.out

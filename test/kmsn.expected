@@ -1,0 +1,5 @@
+No process matches given pattern notexisting
+Now sending SIGTERM to PID X... didn't terminate, sending SIGKILL... killed successfully
+Now sending SIGTERM to PID X... killed successfully
+Now sending SIGTERM to PID X... killed successfully
+Now sending SIGTERM to PID X... killed successfully

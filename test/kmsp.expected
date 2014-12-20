@@ -1,0 +1,5 @@
+PID X not found among running processes, skipping
+Now sending SIGTERM to PID X... didn't terminate, sending SIGKILL... killed successfully
+Now sending SIGTERM to PID X... killed successfully
+Now sending SIGTERM to PID X... killed successfully
+Now sending SIGTERM to PID X... killed successfully
