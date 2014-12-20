@@ -31,7 +31,6 @@ If there's an error on one parameter (e.g. you've specified a name which matches
 The default timeout is 15 seconds. It's currently hardcoded.
 
 ### kmsn
-
 ```
 Kill processes softly by name matching pattern.
 Usage:
@@ -56,7 +55,14 @@ and are installed by default in OSX.
 
 ## Install
 
-Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+Just clone this repository, or [download a packed zip](../../archive/master.zip),
+then run:
+```
+$ make
+$ sudo make install
+```
+
+By default, `make` will install to `/usr/local/bin`, and you're ready to go.
 
 ## License
 
