@@ -1,6 +1,6 @@
 # Kill Me Softly
 
-Kill processes in a reliable manner.
+Kill processes The Right Way.
 
 ## Purpose
 
@@ -19,6 +19,22 @@ It's stupid, but it's everything *killmesoftly* does; it tries to send a SIGTERM
 15 seconds it sends a SIGKILL, if it still doesn't die it reports it.
 
 AFAIK there's no other tool to do that, even though such logic is implemented in a lot of software and service scripts.
+
+## Install
+
+### Standalone executables
+
+Go anywhere in your executable path and download the latest standalone version of [kmsp](https://www.franzoni.eu/releases/killmesoftly/master/kmsp) and [kmsn](https://www.franzoni.eu/releases/killmesoftly/master/kmsn).
+
+```
+wget https://www.franzoni.eu/releases/killmesoftly/master/kmsp https://www.franzoni.eu/releases/killmesoftly/master/kmsn
+chmod +x ./kmsp ./kmsn
+```
+
+### From Github source
+
+Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+
 
 ## Usage
 
@@ -53,21 +69,6 @@ and are installed by default in OSX.
 * Linux or OSX
 * Bash
 * *Kill* and *pgrep* executables (e.g. *procps* package on Ubuntu/Debian)
-
-## Install
-
-### Standalone executables
-
-Go anywhere in your executable path and download the latest standalone version of [kmsp](https://www.franzoni.eu/releases/killmesoftly/master/kmsp) and [kmsn](https://www.franzoni.eu/releases/killmesoftly/master/kmsn).
-
-```
-wget https://www.franzoni.eu/releases/killmesoftly/master/kmsp https://www.franzoni.eu/releases/killmesoftly/master/kmsn
-chmod +x ./kmsp ./kmsn
-```
-
-### From Github source
-
-Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
 
 ## License
 
