@@ -83,6 +83,7 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * consider transforming such scripts in a set of functions that can be sourced, rather than used as executables
 * add options for killing process groups and/or check whether children have actually exited
 * add options for matching on full name, not just on process name
+* remove dependency on bash and let sh suffice.
 
 ## Thanks
 
