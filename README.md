@@ -58,7 +58,7 @@ and are installed by default in OSX.
 
 ### Standalone executables
 
-Go anywhere in your executable path and download the latest standalone version of the executables:
+Go anywhere in your executable path and download the latest standalone version of [kmsp](https://www.franzoni.eu/releases/killmesoftly/master/kmsp) and [kmsn](https://www.franzoni.eu/releases/killmesoftly/master/kmsn).
 
 ```
 wget https://www.franzoni.eu/releases/killmesoftly/master/kmsp https://www.franzoni.eu/releases/killmesoftly/master/kmsn
