@@ -47,7 +47,8 @@ Usage:
 
 ## Requirements
 
-Those should be available on almost any Linux system, even on minimal installs:
+Those should be available on almost any Linux system, even on minimal installs,
+and are installed by default in OSX.
 
 * Linux or OSX
 * Bash
@@ -69,3 +70,11 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * configurable timeouts
 * consider transforming such scripts in a set of functions that can be sourced, rather than used as executables
 * add options for killing process groups and/or check whether children have actually exited
+
+## Thanks
+
+The following people helped developing this software in some way or another, without
+a specific order.
+
+* Jean-Philippe Daigle
+* Laurent Cozic
