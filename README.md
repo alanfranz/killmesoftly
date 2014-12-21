@@ -33,7 +33,29 @@ chmod +x ./kmsp ./kmsn
 
 ### From Github source
 
-Just clone this repository, or [download a packed zip](../../archive/master.zip), put  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+Just clone this repository, or [download a packed zip](../../archive/master.zip), and use
+
+```
+make install
+```
+
+by default, this will install standalone executables in ```/usr/local/bin```. If you want to change your install destination:
+
+```
+make PREFIX=/tmp/asd install
+```
+
+will install in ```/tmp/asd/bin``` or
+
+```
+make BINDIR=/tmp/mydir install
+```
+
+will install in ```/tmp/mydir```.
+
+Otherwise, for a make-less install, you could just copy  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+
+If you want to develop changes to killmesoftly, just symlink ```kmsp```, ```kmsn``` and ```kms_functions``` to a directory in your path (e.g. ~/bin)
 
 
 ## Usage
