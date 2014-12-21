@@ -24,6 +24,8 @@ AFAIK there's no other tool to do that, even though such logic is implemented in
 
 ### Standalone executables
 
+**This is the recommended way to go** if you just want to use this tool, at least until I don't submit it to Homebrew and Linuxbrew.
+
 Go anywhere in your executable path and download the latest standalone version of [kmsp](https://www.franzoni.eu/releases/killmesoftly/master/kmsp) and [kmsn](https://www.franzoni.eu/releases/killmesoftly/master/kmsn).
 
 ```
@@ -32,6 +34,8 @@ chmod +x ./kmsp ./kmsn
 ```
 
 ### From Github source
+
+#### Build and install
 
 Just clone this repository, or [download a packed zip](../../archive/master.zip), and use
 
@@ -53,7 +57,11 @@ make BINDIR=/tmp/mydir install
 
 will install in ```/tmp/mydir```.
 
+#### Make-less installation
+
 Otherwise, for a make-less install, you could just copy  ```kmsp``` and ```kmsn``` in your path, set them executable, make sure ```kms_functions``` is in the same directory, and you're ready to go.
+
+#### Developer-wise installation
 
 If you want to develop changes to killmesoftly, just symlink ```kmsp```, ```kmsn``` and ```kms_functions``` to a directory in your path (e.g. ~/bin)
 
@@ -107,7 +115,7 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * add options for matching on full name, not just on process name
 * remove dependency on bash and let sh suffice.
 * add tool in Linuxbrew and Homebrew repositories for easy install.
-* make the testsuite runnable on OSX
+* make the testsuite runnable on OSX (currently prevented by extended sed regexp)
 
 ## Thanks
 
