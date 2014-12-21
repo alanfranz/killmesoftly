@@ -8,13 +8,13 @@ test: testkmsn testkmsn.standalone testkmsp testkmsp.standalone
 testkmsn: testenv
 	@rm -f kmsn*.out
 	@testenv/bin/hardtokill -c "import time; import signal; signal.signal(signal.SIGTERM, lambda x,y: time.sleep(120)); time.sleep(120)"&
-	@testenv/bin/asd1 -c "import time; time.sleep(120)"&
-	@testenv/bin/asd2 -c "import time; time.sleep(120)"&
-	@testenv/bin/asd3 -c "import time; time.sleep(120)"&
+	@testenv/bin/asdfirst -c "import time; time.sleep(120)"&
+	@testenv/bin/asdsecond -c "import time; time.sleep(120)"&
+	@testenv/bin/asdthird -c "import time; time.sleep(120)"&
 	@sleep 1
 
 	@echo -e "Will now try killing five processes. The first should fail because of nonmatching name, the second should die with SIGKILL, the other three should die instantly:\n"
-	@../kmsn notexisting hardtokill asd1 asd2 asd3 | tee kmsn.out
+	@../kmsn notexisting hardtokill asdfirst asdsecond asdthird | tee kmsn.out
 	@sed --regexp-extended -e 's/[0-9]+/X/g' kmsn.out > kmsn.sedded.out
 	@diff -u kmsn.sedded.out kmsn.expected
 	@echo
@@ -22,12 +22,12 @@ testkmsn: testenv
 testkmsn.standalone: testenv
 	@rm -f kmsn*.out
 	@testenv/bin/hardtokill -c "import time; import signal; signal.signal(signal.SIGTERM, lambda x,y: time.sleep(120)); time.sleep(120)"&
-	@testenv/bin/asd1 -c "import time; time.sleep(120)"&
-	@testenv/bin/asd2 -c "import time; time.sleep(120)"&
-	@testenv/bin/asd3 -c "import time; time.sleep(120)"&
+	@testenv/bin/asdfirst -c "import time; time.sleep(120)"&
+	@testenv/bin/asdsecond -c "import time; time.sleep(120)"&
+	@testenv/bin/asdthird -c "import time; time.sleep(120)"&
 	@sleep 1
 	@echo -e "Will now try killing five processes. The first should fail because of nonmatching name, the second should die with SIGKILL, the other three should die instantly:\n"
-	@../obj/kmsn notexisting hardtokill asd1 asd2 asd3 | tee kmsn.standalone.out
+	@../obj/kmsn notexisting hardtokill asdfirst asdsecond asdthird | tee kmsn.standalone.out
 	@sed --regexp-extended -e 's/[0-9]+/X/g' kmsn.standalone.out > kmsn.standalone.sedded.out
 	@diff -u kmsn.standalone.sedded.out kmsn.expected
 	@echo
@@ -67,7 +67,7 @@ distclean:
 testenv:
 	virtualenv testenv
 	cp testenv/bin/python testenv/bin/hardtokill
-	cp testenv/bin/python testenv/bin/asd1
-	cp testenv/bin/python testenv/bin/asd2
-	cp testenv/bin/python testenv/bin/asd3
+	cp testenv/bin/python testenv/bin/asdfirst
+	cp testenv/bin/python testenv/bin/asdsecond
+	cp testenv/bin/python testenv/bin/asdthird
 
