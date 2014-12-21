@@ -107,6 +107,7 @@ This is Apache-2.0 licensed, which is the most permissive license I could think 
 * add options for matching on full name, not just on process name
 * remove dependency on bash and let sh suffice.
 * add tool in Linuxbrew and Homebrew repositories for easy install.
+* make the testsuite runnable on OSX
 
 ## Thanks
 
