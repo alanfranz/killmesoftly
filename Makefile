@@ -18,7 +18,7 @@ $(OBJDIR)/%: % kms_functions
 all: $(OBJFILES)
 
 clean:
-	rm -rf $(OBJDIR)/
+	rm -rf $(OBJDIR)
 
 test: all
 	cd test ; make distclean test
